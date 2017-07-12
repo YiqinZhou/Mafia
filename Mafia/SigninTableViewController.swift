@@ -17,7 +17,7 @@ class SigninTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //let ref = Database.database().reference(fromURL: "https://mafia-d3e23.firebaseio.com/")
+        let ref = Database.database().reference(fromURL: "https://mafia-d3e23.firebaseio.com/")
         
 
         // Uncomment the following line to preserve selection between presentations
@@ -33,22 +33,61 @@ class SigninTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
+    /*
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 2
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
     }
+    */
 
     @IBAction func Register(_ sender: Any) {
+        /*
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
             // ...
+            if error != nil {
+            }
         }
+      */
+        
+        
+        if email.text == "" {
+            let alertController = UIAlertController(title: "Error", message: "Please enter your email and password", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+            
+        } else {
+            Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
+                
+                if error == nil {
+                    print("You have successfully signed up")
+                    //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
+                    
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
+                    self.present(vc!, animated: true, completion: nil)
+                    
+                } else {
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    
     }
+    
+    
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
