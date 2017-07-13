@@ -9,13 +9,29 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Mafia/STIConfigViewController.swift"
-            timestampString = "521553933.047924"
+            filePath = "Mafia/SigninTableViewController.swift"
+            timestampString = "521566894.123158"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "201"
-            endingLineNumber = "201"
-            landmarkName = "Confirm(_:)"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "Register(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Mafia/SigninTableViewController.swift"
+            timestampString = "521562934.104524"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "65"
+            endingLineNumber = "65"
+            landmarkName = "Register(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

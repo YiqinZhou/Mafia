@@ -1,10 +1,6 @@
 //
 //  STIConfigViewController.swift
-//  WerewolvesAssistant
-//
-//  Created by Jun on 2017/5/27.
-//  Copyright © 2017年 Jun. All rights reserved.
-//  配置
+
 
 import UIKit
 
@@ -29,7 +25,7 @@ class STIConfigViewController: UIViewController {
     @IBOutlet weak var elderSwitch: UISwitch!
     @IBOutlet weak var thiefSwitch: UISwitch!
     
-    var delegate: PlayerSettingsDelegate?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -194,12 +190,16 @@ class STIConfigViewController: UIViewController {
         
         return count
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? PlayingViewController {
+            vc.playerNumber = playerTextField.text
+        }
+    }
 
     @IBAction func Confirm(_ sender: Any) {
         
-        self.delegate?.totalPlayers(playerNumber: Int(playerTextField.text!)!)
-        print (playerNumber)
-        //self.dismiss(animated: true, completion: nil)
+        
         
         
     }

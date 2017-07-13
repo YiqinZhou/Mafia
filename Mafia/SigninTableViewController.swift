@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class SigninTableViewController: UITableViewController {
     
@@ -47,13 +48,15 @@ class SigninTableViewController: UITableViewController {
     */
 
     @IBAction func Register(_ sender: Any) {
+        
         /*
         Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
             // ...
             if error != nil {
             }
         }
-      */
+       */
+      
         
         
         if email.text == "" {
@@ -65,16 +68,18 @@ class SigninTableViewController: UITableViewController {
             present(alertController, animated: true, completion: nil)
             
         } else {
-            Auth.auth().createUser(withEmail: email.text!, password: password.text!) { (user, error) in
+            Auth.auth().createUser(withEmail: email.text!, password: password.text!)
+            { (user, error) in
                 
                 if error == nil {
                     print("You have successfully signed up")
                     //Goes to the Setup page which lets the user take a photo for their profile picture and also chose a username
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "Home")
-                    self.present(vc!, animated: true, completion: nil)
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "FirstPage")
+                    self.navigationController?.pushViewController(vc!, animated: true)
                     
                 } else {
+                  
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -87,6 +92,44 @@ class SigninTableViewController: UITableViewController {
     
     }
     
+    @IBAction func Login(_ sender: Any) {
+        if self.email.text == "" || self.password.text == "" {
+            
+            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
+            
+            let alertController = UIAlertController(title: "Error", message: "Please enter an email and password.", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            self.present(alertController, animated: true, completion: nil)
+            
+        } else {
+            
+            Auth.auth().signIn(withEmail: self.email.text!, password: self.password.text!) { (user, error) in
+                
+                if error == nil {
+                    
+                    //Print into the console if successfully logged in
+                    print("You have successfully logged in")
+                    
+                    //Go to the HomeViewController if the login is sucessful
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "FirstPage")
+                    self.navigationController?.pushViewController(vc!, animated: true)
+                    
+                } else {
+                    
+                    //Tells the user that there is an error and then gets firebase to tell them the error
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
+                    
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
+                }
+            }
+        }
+    }
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

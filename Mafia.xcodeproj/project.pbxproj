@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		13B1EF6C1F153D4500948CC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EF6B1F153D4500948CC6 /* AppDelegate.swift */; };
-		13B1EF6E1F153D4500948CC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EF6D1F153D4500948CC6 /* ViewController.swift */; };
+		13B1EF6E1F153D4500948CC6 /* MafiaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EF6D1F153D4500948CC6 /* MafiaViewController.swift */; };
 		13B1EF711F153D4500948CC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B1EF6F1F153D4500948CC6 /* Main.storyboard */; };
 		13B1EF731F153D4500948CC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B1EF721F153D4500948CC6 /* Assets.xcassets */; };
 		13B1EF761F153D4500948CC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13B1EF741F153D4500948CC6 /* LaunchScreen.storyboard */; };
@@ -19,13 +19,16 @@
 		13B1EFA81F158B4400948CC6 /* STIHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EFA71F158B4400948CC6 /* STIHomeViewController.swift */; };
 		13B1EFAA1F16382B00948CC6 /* PlayingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EFA91F16382B00948CC6 /* PlayingViewController.swift */; };
 		13B1EFAC1F163AE800948CC6 /* PlayerSettingsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EFAB1F163AE800948CC6 /* PlayerSettingsDelegate.swift */; };
+		13B1EFAE1F1777FD00948CC6 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EFAD1F1777FD00948CC6 /* StartViewController.swift */; };
+		13B1EFB01F17A71100948CC6 /* RoomTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EFAF1F17A71100948CC6 /* RoomTableViewController.swift */; };
+		13B1EFB21F17A7C700948CC6 /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B1EFB11F17A7C700948CC6 /* Channel.swift */; };
 		4ED9F98AFCE36E775C029879 /* Pods_Mafia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3458A0A6AA67E9F35AF737F8 /* Pods_Mafia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		13B1EF681F153D4500948CC6 /* Mafia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mafia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B1EF6B1F153D4500948CC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		13B1EF6D1F153D4500948CC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		13B1EF6D1F153D4500948CC6 /* MafiaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MafiaViewController.swift; sourceTree = "<group>"; };
 		13B1EF701F153D4500948CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		13B1EF721F153D4500948CC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		13B1EF751F153D4500948CC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +40,9 @@
 		13B1EFA71F158B4400948CC6 /* STIHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = STIHomeViewController.swift; sourceTree = "<group>"; };
 		13B1EFA91F16382B00948CC6 /* PlayingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayingViewController.swift; sourceTree = "<group>"; };
 		13B1EFAB1F163AE800948CC6 /* PlayerSettingsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerSettingsDelegate.swift; sourceTree = "<group>"; };
+		13B1EFAD1F1777FD00948CC6 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		13B1EFAF1F17A71100948CC6 /* RoomTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoomTableViewController.swift; sourceTree = "<group>"; };
+		13B1EFB11F17A7C700948CC6 /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
 		265FB5014CBBAB4B0EB48924 /* Pods-Mafia.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.debug.xcconfig"; sourceTree = "<group>"; };
 		3458A0A6AA67E9F35AF737F8 /* Pods_Mafia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mafia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B2269057FBDD589C7E84F6 /* Pods-Mafia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mafia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Mafia/Pods-Mafia.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,14 +83,17 @@
 		13B1EF6A1F153D4500948CC6 /* Mafia */ = {
 			isa = PBXGroup;
 			children = (
+				13B1EFB11F17A7C700948CC6 /* Channel.swift */,
 				13B1EF6B1F153D4500948CC6 /* AppDelegate.swift */,
-				13B1EF6D1F153D4500948CC6 /* ViewController.swift */,
+				13B1EF6D1F153D4500948CC6 /* MafiaViewController.swift */,
+				13B1EF9D1F15739900948CC6 /* SigninTableViewController.swift */,
 				13B1EF6F1F153D4500948CC6 /* Main.storyboard */,
-				13B1EFA91F16382B00948CC6 /* PlayingViewController.swift */,
+				13B1EFAF1F17A71100948CC6 /* RoomTableViewController.swift */,
+				13B1EFAD1F1777FD00948CC6 /* StartViewController.swift */,
 				13B1EFA71F158B4400948CC6 /* STIHomeViewController.swift */,
 				13B1EFA51F158B3400948CC6 /* STIConfigViewController.swift */,
+				13B1EFA91F16382B00948CC6 /* PlayingViewController.swift */,
 				13B1EFAB1F163AE800948CC6 /* PlayerSettingsDelegate.swift */,
-				13B1EF9D1F15739900948CC6 /* SigninTableViewController.swift */,
 				13B1EF721F153D4500948CC6 /* Assets.xcassets */,
 				13B1EF741F153D4500948CC6 /* LaunchScreen.storyboard */,
 				13B1EF771F153D4500948CC6 /* Info.plist */,
@@ -235,10 +244,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B1EFA61F158B3400948CC6 /* STIConfigViewController.swift in Sources */,
+				13B1EFB21F17A7C700948CC6 /* Channel.swift in Sources */,
+				13B1EFAE1F1777FD00948CC6 /* StartViewController.swift in Sources */,
 				13B1EFAC1F163AE800948CC6 /* PlayerSettingsDelegate.swift in Sources */,
-				13B1EF6E1F153D4500948CC6 /* ViewController.swift in Sources */,
+				13B1EF6E1F153D4500948CC6 /* MafiaViewController.swift in Sources */,
 				13B1EFA81F158B4400948CC6 /* STIHomeViewController.swift in Sources */,
 				13B1EFAA1F16382B00948CC6 /* PlayingViewController.swift in Sources */,
+				13B1EFB01F17A71100948CC6 /* RoomTableViewController.swift in Sources */,
 				13B1EF6C1F153D4500948CC6 /* AppDelegate.swift in Sources */,
 				13B1EF9E1F15739900948CC6 /* SigninTableViewController.swift in Sources */,
 			);

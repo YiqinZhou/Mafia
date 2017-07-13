@@ -1,10 +1,6 @@
 //
 //  STIHomeViewController.swift
-//  WerewolvesAssistant
-//
-//  Created by Jun on 2017/5/27.
-//  Copyright © 2017年 Jun. All rights reserved.
-//
+
 
 import UIKit
 

@@ -7,11 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
-class PlayingViewController: UIViewController, PlayerSettingsDelegate {
+class PlayingViewController: UIViewController{
+    
+    var playerNumber: String? = nil
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        let allPlayers = Int(playerNumber!)!
+        
+        for i in 1...allPlayers{
+            let label = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 21))
+            label.center = CGPoint(x: 160, y: 50*i)
+            label.textAlignment = .center
+            label.text = "Player "+String(i)
+            self.view.addSubview(label)
+            
+        }
         
        
 
@@ -24,20 +40,9 @@ class PlayingViewController: UIViewController, PlayerSettingsDelegate {
     }
     
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if (segue.identifier == "startPlaying"){
-            let ActivityNavigationController = segue.destination as! UINavigationController
-            let ActivityViewController = ActivityNavigationController.topViewController as! STIConfigViewController
-            
-            ActivityViewController.delegate = self
-            
-        }
-    }
+  
     
-    func totalPlayers(playerNumber: Int){
-        
-        print(playerNumber)
-    }
+
     
 
     /*
