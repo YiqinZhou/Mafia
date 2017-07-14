@@ -117,6 +117,10 @@ class SigninTableViewController: UITableViewController {
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "FirstPage")
                     self.navigationController?.pushViewController(vc!, animated: true)
                     
+                    
+                    
+                    
+                    
                 } else {
                     
                     //Tells the user that there is an error and then gets firebase to tell them the error
@@ -130,6 +134,8 @@ class SigninTableViewController: UITableViewController {
             }
         }
     }
+    
+    
     
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -449,11 +449,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cIL-Y5-Fcf">
-                                <rect key="frame" x="147" y="571" width="46" height="15"/>
+                                <rect key="frame" x="103" y="547" width="115" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Select Room"/>
                                 <connections>
-                                    <segue destination="36l-Tg-6Mw" kind="show" id="70e-Hg-Rl5"/>
+                                    <segue destination="U3v-Ha-gfs" kind="show" id="460-bw-Wqm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -535,34 +537,6 @@
             </objects>
             <point key="canvasLocation" x="2352.8000000000002" y="839.73013493253382"/>
         </scene>
-        <!--Room Table View Controller-->
-        <scene sceneID="2Kb-Up-z7F">
-            <objects>
-                <tableViewController id="36l-Tg-6Mw" customClass="RoomTableViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="caZ-gk-8mc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pFc-lE-c1c">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pFc-lE-c1c" id="tXS-hx-KMq">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="36l-Tg-6Mw" id="IR3-8N-gxo"/>
-                            <outlet property="delegate" destination="36l-Tg-6Mw" id="Pjh-o8-RmM"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eT7-Zq-33K" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3225" y="1464"/>
-        </scene>
         <!--Playing View Controller-->
         <scene sceneID="gWR-L8-KXy">
             <objects>
@@ -581,6 +555,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sq4-HV-MJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3890" y="809"/>
+        </scene>
+        <!--Channels-->
+        <scene sceneID="zcH-ch-DbO">
+            <objects>
+                <tableViewController title="Channels" id="U3v-Ha-gfs" customClass="RoomTableViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tgc-fO-SMN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewChannel" id="qp0-NM-Hrt" customClass="CreateChannelCell" customModule="Mafia" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qp0-NM-Hrt" id="0d7-XE-W6a">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Create a New Channel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pBt-f1-s2r">
+                                            <rect key="frame" x="16" y="7" width="297" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                            <connections>
+                                                <segue destination="ZNQ-vQ-4DW" kind="show" identifier="ShowChannel" id="rJV-Ia-Yh3"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IgW-7W-MoC">
+                                            <rect key="frame" x="321" y="7" width="46" height="30"/>
+                                            <state key="normal" title="Create"/>
+                                            <connections>
+                                                <action selector="createChannel:" destination="U3v-Ha-gfs" eventType="touchUpInside" id="IR5-5r-HUT"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pBt-f1-s2r" firstAttribute="leading" secondItem="0d7-XE-W6a" secondAttribute="leadingMargin" constant="8" id="0bV-1j-nOE"/>
+                                        <constraint firstItem="pBt-f1-s2r" firstAttribute="centerY" secondItem="0d7-XE-W6a" secondAttribute="centerY" id="5qq-Jx-i8T"/>
+                                        <constraint firstItem="IgW-7W-MoC" firstAttribute="leading" secondItem="pBt-f1-s2r" secondAttribute="trailing" constant="8" id="Ioa-5d-Oxk"/>
+                                        <constraint firstItem="IgW-7W-MoC" firstAttribute="trailing" secondItem="0d7-XE-W6a" secondAttribute="trailingMargin" id="Z46-zv-Nxt"/>
+                                        <constraint firstItem="IgW-7W-MoC" firstAttribute="centerY" secondItem="0d7-XE-W6a" secondAttribute="centerY" id="m2g-7l-c7A"/>
+                                        <constraint firstItem="IgW-7W-MoC" firstAttribute="leading" secondItem="pBt-f1-s2r" secondAttribute="trailing" constant="8" id="ofY-Nh-zzO"/>
+                                        <constraint firstItem="IgW-7W-MoC" firstAttribute="leading" secondItem="pBt-f1-s2r" secondAttribute="trailing" constant="8" id="xwS-rt-9ve"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="xwS-rt-9ve"/>
+                                            <exclude reference="Ioa-5d-Oxk"/>
+                                        </mask>
+                                    </variation>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="createChannelButton" destination="IgW-7W-MoC" id="3eV-MR-Kah"/>
+                                    <outlet property="newChannelNameField" destination="pBt-f1-s2r" id="ZR1-xq-zeb"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExistingChannel" textLabel="z0H-Sd-wmp" style="IBUITableViewCellStyleDefault" id="R8M-KT-ze5">
+                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R8M-KT-ze5" id="Je5-WY-AC2">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="z0H-Sd-wmp">
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="U3v-Ha-gfs" id="3Vv-BM-Hme"/>
+                            <outlet property="delegate" destination="U3v-Ha-gfs" id="8Ak-Fw-xKP"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Shd-lW-uM4"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NcM-u6-KwI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3132" y="1542"/>
+        </scene>
+        <!--Specific Room View Controller-->
+        <scene sceneID="TJx-M8-1D3">
+            <objects>
+                <viewController id="ZNQ-vQ-4DW" customClass="SpecificRoomViewController" customModule="Mafia" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y2i-tl-8gu"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q7E-mP-fMW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="B8C-K2-XVa">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7dF-bp-j7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4232" y="1543"/>
         </scene>
     </scenes>
     <resources>
